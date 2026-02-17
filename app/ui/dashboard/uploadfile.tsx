@@ -19,7 +19,7 @@ export default function UploadFile() {
     const [range, setRange] = useState('A1');
     const router = useRouter();
 
-    const handleChange = (e) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
         if (file) {
             const extention = file.name.split('.').pop()?.toLowerCase();
